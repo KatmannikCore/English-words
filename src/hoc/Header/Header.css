@@ -1,0 +1,17 @@
+.Header{
+    background: #080d1f;
+    display: flex;
+}
+.Header a{
+    transition-duration: 0.5s;
+    padding: 20px;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.Header a:hover{
+    color: darkslateblue;
+}
+.Header a:active {
+    color: #444743;
+}

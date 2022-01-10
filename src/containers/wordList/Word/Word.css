@@ -1,0 +1,13 @@
+.Word{
+    display: flex;
+    justify-content: center;
+
+}
+.Word div{
+    padding: 5px;
+}
+.Word:hover{
+    transition-duration:  800ms;
+    border:1px blue solid;
+    background: antiquewhite;
+}

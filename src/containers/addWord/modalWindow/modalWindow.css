@@ -1,0 +1,15 @@
+.ModalWindow{
+    width: 300px;
+    margin: 0 auto;
+    background: rebeccapurple;
+}
+.modal-string{
+    display: flex;
+    justify-content: space-around;
+}
+.active-string{
+    background: red;
+}
+.modal-string{
+    z-index: -10;
+}
