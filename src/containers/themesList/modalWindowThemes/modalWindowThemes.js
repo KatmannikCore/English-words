@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {GetAllWordsFromDB, SendWordsInDB} from "../../../components/DataDB/DataDB";
-import Word from "../../wordList/Word/Word";
-import './modalWindow.css';
-import axios from "axios";
-class ModalWindow extends Component {
+import './modalWindowThemes.css';
+class ModalWindowThemes extends Component {
     state = {
         words: [],
-        themesWords: []
+        themesWords: {name: '', list: []},
     };
     componentDidMount() {
         GetAllWordsFromDB().then(value => {
@@ -18,15 +16,20 @@ class ModalWindow extends Component {
     }
     addWordsHandler = async () =>{
         let themesWordsBlock = document.querySelectorAll('.modal-string.active-string');
+        let themesWords = this.state.themesWords;
+        themesWords.list = [];
         themesWordsBlock.forEach(item => {
-            let word = {'word':item.firstChild.textContent, 'translation': item.lastChild.textContent};
-            let themesWords = this.state.themesWords;
-            themesWords.push(word);
-            this.setState({
-                themesWords
-            });
+            let word = {'word':item.firstChild.textContent, 'translation': item.lastChild.textContent,};
+            themesWords.list.push(word);
+            this.setState({themesWords});
         });
         SendWordsInDB('Themes', this.state.themesWords);
+    };
+
+    setNameTheme = event =>{
+        this.setState({
+            themesWords: {name: event.target.value, list: {...this.state.themesWords.list}}
+        });
     };
 
     renderModalWindow(){
@@ -42,10 +45,15 @@ class ModalWindow extends Component {
         return (
             <div className = 'ModalWindow'>
                 {this.renderModalWindow()}
+                <p>Название темы</p>
+                <input onChange={this.setNameTheme} type="text"/>
                 <button onClick={this.addWordsHandler}>add</button>
+
+
+
             </div>
         );
     }
 }
 
-export default ModalWindow;
+export default ModalWindowThemes;

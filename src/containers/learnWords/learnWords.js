@@ -1,18 +1,21 @@
 import React, {Component} from 'react';
 import {GetAllThemesFromDB, GetAllWordsFromDB} from "../../components/DataDB/DataDB";
 import './learnWords.css'
+import ModalWindowChooseTheme from "./modalWindowChooseTheme/modalWindowChooseTheme";
 class LearnWords extends Component {
     state = {
-        arrayWord : [],
+        words : [],
         currentWord: '',
         currentNumber: 1,
         isRightWord: true,
-        userWord: ''
+        userWord: '',
+        themes: []
+
     };
     componentDidMount() {
         GetAllWordsFromDB().then(value => {
             this.setState({
-                arrayWord: value,
+                words: value,
                 currentWord: value[0].translation
             });
         })
@@ -30,22 +33,28 @@ class LearnWords extends Component {
     };
     changeWordHandler = () => {
         this.setState({
-            currentWord: this.state.arrayWord[this.state.currentNumber].translation,
-            currentNumber: Math.floor(Math.random() * this.state.arrayWord.length)
+            currentWord: this.state.words[this.state.currentNumber].translation,
+            currentNumber: Math.floor(Math.random() * this.state.words.length)
         })
     };
     create = () => {
-        GetAllThemesFromDB();
+        GetAllThemesFromDB().then(value => {
+            this.setState({
+                themes: value
+            })
+        });
     };
     render() {
         return (
             <div className = 'body'>
                 <button onClick={this.create}>Выбрать тему</button>
+                <ModalWindowChooseTheme themes={this.state.themes}/>
                 <p>{this.state.currentWord}</p>
                 <button onClick={this.changeWordHandler}>Change</button>
                 <input onChange={event => {this.setState({userWord:event.target.value})}} type="text"/>
                 <button onClick={this.checkWordHandler}>Check</button>
                 <p>{this.state.isRightWord ? 'верно':'неверно'}</p>
+
             </div>
         );
     }

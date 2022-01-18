@@ -26,9 +26,8 @@ export async function GetAllThemesFromDB() {
     try {
         let response = await axios.get(`https://learn-words-7ba20-default-rtdb.firebaseio.com/Themes.json`);
         let arrayThemes = [];
-        //console.log(response.data);
-        Object.keys(response.data).forEach((key, index) => {
-            console.log(response.data[key])
+        Object.keys(response.data).forEach((key) => {
+            arrayThemes.push(response.data[key])
         });
         return await arrayThemes
     }catch (e) {

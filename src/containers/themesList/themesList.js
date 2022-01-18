@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {GetAllWordsFromDB} from "../../components/DataDB/DataDB";
-import ModalWindow from "../addWord/modalWindow/modalWindow";
+import ModalWindowThemes from "./modalWindowThemes/modalWindowThemes";
+
 function ThemesList() {
     let [words, setWords] = useState([]);
      async function addThemeHandler() {
@@ -13,7 +14,7 @@ function ThemesList() {
     return (
         <div className = 'body'>
             <button onClick = {addThemeHandler}>cheate new them</button>
-            {!!(words[0]) ? <ModalWindow />: <h1>123</h1>}
+            {!!(words[0]) ? <ModalWindowThemes />: <h1>123</h1>}
         </div>
     );
 }
