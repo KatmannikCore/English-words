@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Word from "./Word/Word";
 import {GetAllWordsFromDB} from "../../components/DataDB/DataDB";
 
-
 class WordList extends Component {
     state = {
         arrayWord: []

@@ -1,29 +1,33 @@
-import React from 'react';
+import React, {useRef}  from 'react';
 import './modalWindowChooseTheme.css'
 function ModalWindowChooseTheme(props) {
-    function renderTheme() {
+    let currentTheme = useRef();
+    function renderThemes() {
         return props.themes.map(item =>{
-            let listWords = item.list.map(word => {
-                return(
-                    <li ><a >{word.word}</a></li>
-                )
-            });
-
             return(
-                <li><a className="active">{item.name} </a>
-                    <ul className="submenu">
-                        {listWords}
-                    </ul>
-                </li>
+                <div onClick = {highlightInRed} >
+                    <p>{item.name}</p>
+                </div>
             )
+        })
+    }
+    function highlightInRed(event){
+        document.querySelectorAll('.active-string').forEach(item => item.className = '');
+        event.currentTarget.classList.toggle('active-string');
+        findCurrentTheme(event.currentTarget.innerText);
+    }
+    function findCurrentTheme(wordOfTheme) {
+        props.themes.forEach(item =>{
+            if(item.name === wordOfTheme){
+                currentTheme = item;
+            }
         })
     }
     return (
         <div id="block">
-            <nav id="menuVertical">
-                <ul >
-                    {renderTheme() }
-                </ul>
+            <nav className="changeTheme">
+                {renderThemes() }
+                <button onClick={() => props.changeTheme(currentTheme)}>Выбрать</button>
             </nav>
         </div>
     );

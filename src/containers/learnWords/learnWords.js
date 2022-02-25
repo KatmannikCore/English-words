@@ -3,23 +3,26 @@ import {GetAllThemesFromDB, GetAllWordsFromDB} from "../../components/DataDB/Dat
 import './learnWords.css'
 import ModalWindowChooseTheme from "./modalWindowChooseTheme/modalWindowChooseTheme";
 class LearnWords extends Component {
-    state = {
-        words : [],
-        currentWord: '',
-        currentNumber: 1,
-        isRightWord: true,
-        userWord: '',
-        themes: []
-
-    };
-    componentDidMount() {
-        GetAllWordsFromDB().then(value => {
-            this.setState({
-                words: value,
-                currentWord: value[0].translation
-            });
-        })
+    constructor(){
+        super();
+        this.state = {
+            currentWord: '',
+            currentNumber: 1,
+            isRightWord: true,
+            userWord: '',
+            themes: [],
+            currentTheme: [],
+            isOpenWindow:false,
+        };
+        this.changeTheme = this.changeTheme.bind(this)
     }
+    changeTheme = (value) =>{
+        this.setState({
+            currentTheme: value,
+            currentWord: value.list[0].translation
+        });
+        this.createWindow()
+    };
     checkWordHandler = () => {
        if(this.state.userWord === this.state.currentWord){
            this.setState({
@@ -33,27 +36,38 @@ class LearnWords extends Component {
     };
     changeWordHandler = () => {
         this.setState({
-            currentWord: this.state.words[this.state.currentNumber].translation,
-            currentNumber: Math.floor(Math.random() * this.state.words.length)
+            currentWord: this.state.currentTheme.list[this.state.currentNumber].translation,
+            currentNumber: Math.floor(Math.random() * this.state.currentTheme.list.length)
         })
     };
-    create = () => {
+    createWindow = () => {
+        this.setState({
+            isOpenWindow: !this.state.isOpenWindow
+        })
+    };
+    componentDidMount() {
         GetAllThemesFromDB().then(value => {
             this.setState({
                 themes: value
             })
         });
-    };
+    }
+
     render() {
         return (
             <div className = 'body'>
-                <button onClick={this.create}>Выбрать тему</button>
-                <ModalWindowChooseTheme themes={this.state.themes}/>
-                <p>{this.state.currentWord}</p>
-                <button onClick={this.changeWordHandler}>Change</button>
-                <input onChange={event => {this.setState({userWord:event.target.value})}} type="text"/>
-                <button onClick={this.checkWordHandler}>Check</button>
-                <p>{this.state.isRightWord ? 'верно':'неверно'}</p>
+                <button onClick={this.createWindow}>Выбрать тему</button>
+                {this.state.isOpenWindow ?(
+                    <div>
+                        <p>{this.state.currentWord}</p>
+                        <button onClick={this.changeWordHandler}>Change</button>
+                        <input onChange={event => {this.setState({userWord:event.target.value})}} type="text"/>
+                        <button onClick={this.checkWordHandler}>Check</button>
+                        <p>{this.state.isRightWord ? 'верно':'неверно'}</p>
+                    </div>)
+                    :(<ModalWindowChooseTheme themes={this.state.themes} changeTheme = {this.changeTheme}/>)
+                }
+
 
             </div>
         );
