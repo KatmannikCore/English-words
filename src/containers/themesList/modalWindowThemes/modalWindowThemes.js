@@ -23,7 +23,8 @@ class ModalWindowThemes extends Component {
             themesWords.list.push(word);
             this.setState({themesWords});
         });
-        SendWordsInDB('Themes', this.state.themesWords);
+        SendWordsInDB('Themes', this.state.themesWords).then(() => window.location.reload());
+
     };
 
     setNameTheme = event =>{
@@ -48,9 +49,6 @@ class ModalWindowThemes extends Component {
                 <p>Название темы</p>
                 <input onChange={this.setNameTheme} type="text"/>
                 <button onClick={this.addWordsHandler}>add</button>
-
-
-
             </div>
         );
     }

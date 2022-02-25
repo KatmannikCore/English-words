@@ -1,0 +1,20 @@
+.hidden_ul ul{
+    display: none;
+}
+li{
+    list-style-type: none;
+}
+.themes_item{
+    position: relative;
+    right: 20px;
+    padding-bottom: 5px;
+}
+.themes_item  li{
+    position: relative;
+    right: 20px;
+}
+.body{
+    margin: 0;
+    position: relative;
+    bottom: 16px;
+}

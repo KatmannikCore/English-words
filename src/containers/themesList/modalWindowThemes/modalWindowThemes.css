@@ -13,3 +13,6 @@
 .modal-string{
     z-index: -10;
 }
+.ModalWindow{
+    z-index: 1000;
+}

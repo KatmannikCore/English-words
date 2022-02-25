@@ -11,7 +11,7 @@ function AddWord(props) {
     async function addWordHandler(event) {
         event.preventDefault();
         try {
-            await axios.post('https://learn-words-7ba20-default-rtdb.firebaseio.com/word.json', word[0]);
+            await axios.post('https://react-words-29c77-default-rtdb.firebaseio.com/word.json', word[0]);
         } catch (e) {
             console.log(e)
         }
