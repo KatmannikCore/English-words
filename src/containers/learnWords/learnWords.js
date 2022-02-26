@@ -6,9 +6,9 @@ class LearnWords extends Component {
     constructor(){
         super();
         this.state = {
-            currentWord: '',
-            currentNumber: 1,
-            isRightWord: true,
+            currentWord: {},
+            currentNumber: 0,
+            isRightWord: false,
             userWord: '',
             themes: [],
             currentTheme: [],
@@ -18,57 +18,72 @@ class LearnWords extends Component {
     }
     changeTheme = (value) =>{
         this.setState({
-            currentTheme: value,
-            currentWord: value.list[0].translation
+            currentTheme: value.list,
+            currentWord: value.list[this.state.currentNumber]
         });
         this.createWindow()
     };
     checkWordHandler = () => {
-       if(this.state.userWord === this.state.currentWord){
-           this.setState({
-               isRightWord:true
-           })
-       }else {
-           this.setState({
-               isRightWord:false
-           })
-       }
+        if(this.state.currentTheme.length === 0){
+            alert('тест закочен')
+        }else {
+            if(this.state.userWord === this.state.currentWord.word){
+                let currentTheme = this.state.currentTheme;
+                let index = currentTheme.indexOf(this.state.currentWord);
+                currentTheme.splice(index, 1);
+                this.setState({
+                    isRightWord:true,
+                    currentTheme
+                });
+                this.changeWordHandler()
+            }else {
+                this.setState({
+                    isRightWord:false
+                })
+            }
+        }
     };
     changeWordHandler = () => {
-        this.setState({
-            currentWord: this.state.currentTheme.list[this.state.currentNumber].translation,
-            currentNumber: Math.floor(Math.random() * this.state.currentTheme.list.length)
-        })
+        if(this.state.currentTheme.length === 0){
+            alert('тест закочен')
+        }else {
+            this.setState({
+                currentWord: this.state.currentTheme[this.state.currentNumber],
+                currentNumber: Math.floor(Math.random() *(this.state.currentTheme.length - 1))
+            });
+            console.log(this.state.currentNumber, this.state.currentTheme.length)
+        }
     };
     createWindow = () => {
         this.setState({
             isOpenWindow: !this.state.isOpenWindow
-        })
+        });
     };
     componentDidMount() {
         GetAllThemesFromDB().then(value => {
             this.setState({
-                themes: value
+                themes: value,
             })
         });
     }
-
+    onChangeHandler = (event) =>{
+        this.setState({userWord:event.target.value});
+    };
     render() {
         return (
             <div className = 'body'>
                 <button onClick={this.createWindow}>Выбрать тему</button>
                 {this.state.isOpenWindow ?(
                     <div>
-                        <p>{this.state.currentWord}</p>
+                        {console.log(this.state.currentWord.translation)}
+                        <p>{this.state.currentWord.translation}</p>
                         <button onClick={this.changeWordHandler}>Change</button>
-                        <input onChange={event => {this.setState({userWord:event.target.value})}} type="text"/>
+                        <input onChange={this.onChangeHandler} type="text"/>
                         <button onClick={this.checkWordHandler}>Check</button>
                         <p>{this.state.isRightWord ? 'верно':'неверно'}</p>
                     </div>)
                     :(<ModalWindowChooseTheme themes={this.state.themes} changeTheme = {this.changeTheme}/>)
                 }
-
-
             </div>
         );
     }
