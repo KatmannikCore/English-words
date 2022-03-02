@@ -1,0 +1,21 @@
+.modal-result{
+    background: aliceblue;
+    color: black;
+}
+.modal-container{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 200px;
+    opacity: 1;
+    transform: scale(0);
+}
+.active{
+    transform: scale(1);
+}

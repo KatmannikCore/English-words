@@ -1,5 +1,4 @@
 import axios from "axios";
-import {async} from "q";
 export async function GetAllWordsFromDB() {
     try {
         let response = await axios.get(`https://react-words-29c77-default-rtdb.firebaseio.com/word.json`);

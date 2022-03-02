@@ -15,20 +15,15 @@ function AddWord(props) {
         } catch (e) {
             console.log(e)
         }
-
     }
 
     return (
         <div className = 'body'>
             <p>Русское слово</p>
-            <input onChange={(event) => {
-                word[0].word = event.target.value
-            }} type="text"/>
+            <input onChange={(event) => {word[0].word = event.target.value}} type="text"/>
 
             <p>Англиское слово</p>
-            <input onChange={(event) => {
-                word[0].translation = event.target.value
-            }} type="text"/>
+            <input onChange={(event) => {word[0].translation = event.target.value}} type="text"/>
             <button onClick={addWordHandler}>send</button>
         </div>
     );
