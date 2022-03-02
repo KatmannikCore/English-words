@@ -5,11 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.625554a2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.625554a2.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.66154a92.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.66154a92.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.66154a92.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.5ad0c21f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.5ad0c21f.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7d267224.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7d267224.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7d267224.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
@@ -20,18 +20,15 @@
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/16.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/17.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/18.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/learnWords/learnWords.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/learnWords/learnWords.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/learnWords/learnWords.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/learnWords/learnWords.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/addWord/addWord.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/addWord/addWord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/addWord/addWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/addWord/addWord.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,32 +43,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/learnWords/learnWords.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/addWord/addWord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-333">
-              <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="232">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1646236827808" expanded="true" signature="1249:1270" ph="..." />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/learnWords/learnWords.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            <state relative-caret-position="924">
+              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="90" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1646237046159" expanded="true" signature="1239:1260" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/learnWords/learnWords.css">
+        <entry file="file://$PROJECT_DIR$/src/containers/addWord/addWord.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
-              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -95,7 +95,6 @@
         <option value="$PROJECT_DIR$/src/containers/themesList/modalWindowThemes/modalWindowThemes.js" />
         <option value="$PROJECT_DIR$/src/containers/themesList/themesList.css" />
         <option value="$PROJECT_DIR$/src/containers/wordList/wordList.js" />
-        <option value="$PROJECT_DIR$/src/containers/addWord/addWord.js" />
         <option value="$PROJECT_DIR$/src/components/DataDB/DataDB.js" />
         <option value="$PROJECT_DIR$/src/containers/learnWords/modalWindowResultLearn/modalWindowResultLearn.css" />
         <option value="$PROJECT_DIR$/src/containers/learnWords/modalWindowResultLearn/modalWindowResultLearn.js" />
@@ -103,6 +102,8 @@
         <option value="$PROJECT_DIR$/src/containers/learnWords/learnWords.css" />
         <option value="$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.js" />
         <option value="$PROJECT_DIR$/src/containers/learnWords/learnWords.js" />
+        <option value="$PROJECT_DIR$/src/containers/addWord/addWord.css" />
+        <option value="$PROJECT_DIR$/src/containers/addWord/addWord.js" />
       </list>
     </option>
   </component>
@@ -153,7 +154,7 @@
               <item name="English-words" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="learnWords" type="462c0819:PsiDirectoryNode" />
+              <item name="addWord" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="English-words" type="b2602c69:ProjectViewProjectNode" />
@@ -161,15 +162,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="learnWords" type="462c0819:PsiDirectoryNode" />
-              <item name="modalWindowChooseTheme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="English-words" type="b2602c69:ProjectViewProjectNode" />
-              <item name="English-words" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="learnWords" type="462c0819:PsiDirectoryNode" />
-              <item name="modalWindowResultLearn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,21 +264,25 @@
       <workItem from="1646223825779" duration="1752000" />
       <workItem from="1646225649541" duration="1673000" />
       <workItem from="1646227584488" duration="1696000" />
-      <workItem from="1646236628813" duration="279000" />
+      <workItem from="1646236628813" duration="508000" />
+      <workItem from="1646240212719" duration="390000" />
+      <workItem from="1646242309698" duration="1617000" />
+      <workItem from="1646244120657" duration="1754000" />
+      <workItem from="1646245939480" duration="700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57328000" />
+    <option name="totallyTimeSpent" value="62018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4473161" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4413519" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="npm" order="3" sideWeight="0.5526839" side_tool="true" visible="true" weight="0.24947146" />
+      <window_info id="npm" order="3" sideWeight="0.5586481" side_tool="true" visible="true" weight="0.24947146" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27936962" />
@@ -384,16 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/addWord/addWord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/themesList/modalWindowThemes/modalWindowThemes.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -418,6 +404,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/learnWords/learnWords.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -425,21 +418,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/learnWords/modalWindowChooseTheme/modalWindowChooseTheme.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/addWord/addWord.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        <state relative-caret-position="232">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/learnWords/learnWords.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="924">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="90" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1646236827808" expanded="true" signature="1249:1270" ph="..." />
+            <marker date="1646237046159" expanded="true" signature="1239:1260" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/addWord/addWord.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
