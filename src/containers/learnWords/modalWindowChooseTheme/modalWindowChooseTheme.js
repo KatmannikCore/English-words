@@ -20,8 +20,9 @@ function ModalWindowChooseTheme(props) {
         props.themes.forEach(item =>{
             if(item.name === wordOfTheme){
                 currentTheme = item;
+                console.log(currentTheme, item)
             }
-        })
+        });
     }
     return (
         <div id="block">
